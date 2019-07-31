@@ -1,0 +1,47 @@
+
+////
+/// HIDE trump
+///
+/// This is the hide triumphs styles
+////
+@if $include__trumps--hide {
+////
+/// Hide trump
+/// @access public
+/// @author Dfront Specialist Team
+/// @group trumps
+/// @name .t-hide
+/// @since version 1.0.0
+////
+    .t-hide {
+        display: none !important;
+    }
+    // Loop over our breakpoints defined in _settings.responsive.scss
+    @each $breakpoint in $breakpoints {
+
+        // Get the name of the breakpoint.
+        $alias: nth($breakpoint, 1);
+
+        @include media-query($alias) {
+/// Hide trump in a given breakpoint
+/// @access public
+/// @author Dfront Specialist Team
+/// @group trumps
+/// @name .t-hide-#{$alias}
+/// @example scss .t-hide-sm
+/// media-query(sm){
+///    .t-hide-sm{
+///        display: none !important;
+///    }
+/// }
+/// @see media-query
+/// @since version 1.0.0
+            .t-hide-#{$alias} {
+                display: none !important;
+            }
+
+        }
+        // Close media query.
+    }
+
+}// end if

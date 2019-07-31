@@ -1,0 +1,96 @@
+/*-------------------------------------------------------------
+    #ALERTS
+-----------------------------------------------------------------*/
+
+@if $include__alert==true {
+	// Block
+	$alert__position				:	relative 				!default;
+	$alert__padding-y				:	12						!default;
+	$alert__padding-x				:	20						!default;
+	$alert__margin-bottom			:	16						!default;
+	$alert__font-size				:	$ns-font-size			!default;
+	$alert__line-height				:	$alert__font-size + 4	!default;
+	$alert__font-weight				:	400						!default;
+	$alert__color					:	color(black)		  !default;
+	$alert__border					:	1						!default;
+	$alert__border-style			:	solid					!default;
+	$alert__border-color			:	color(black)	  	  !default;
+	$alert__border-radius			:	4						!default;
+	// Element __close
+	$alert__close-font-size			:	22						!default;
+	$alert__close-top				:	10						!default;
+	$alert__close-bottom			:	auto					!default;
+	$alert__close-left				:	auto					!default;
+	$alert__close-right				:	10						!default;
+	$alert__close-width				:	20						!default;
+	$alert__close-height			:	20						!default;
+	$alert__close-pointer			:	pointer					!default;
+	// Modifier colors
+	$alert__colors					:	default primary success danger warning info darken	!default;
+
+	.o-alert,
+	%alert {
+		position			:	$alert__position;
+		padding				:	rem($alert__padding-y) rem($alert__padding-x);
+		margin-bottom		:	rem($alert__margin-bottom);
+		font-size			:	rem($ns-font-size);
+		line-height			:	rem($alert__line-height);
+		font-weight			:	$alert__font-weight;
+		color				:	$alert__color;
+		border				:	$alert__border+px $alert__border-style $alert__border-color;
+		@include border-radius($alert__border-radius+px);
+
+		/*
+		* Elements
+		*/
+
+		&__close {
+			position			:	absolute;
+			top					:	if($alert__close-top == auto, auto, rem($alert__close-top));
+			bottom				:	if($alert__close-bottom == auto, auto, rem($alert__close-bottom));
+			right				:	if($alert__close-right == auto, auto, rem($alert__close-right));
+			left				:	if($alert__close-left == auto, auto, rem($alert__close-left));
+			width				:	rem($alert__close-width);
+			height				:	rem($alert__close-height);
+			margin				:	0;
+			padding				:	0;
+			font-size			:	rem($alert__close-font-size);
+			line-height			:	1;
+			color				:	color(default);
+			border				:	transparent;
+			background-color	:	transparent;
+			cursor				:	$alert__close-pointer;
+
+			&:hover,
+			&:focus,
+			&:active {
+				outline: 0;
+				border: transparent;
+				background-color: transparent;
+				color:	color(default-darker);
+			}
+		}
+
+		/**
+		 * Modifiers others
+		 */
+
+		&--close {
+			padding-right: rem(40);
+		}
+
+		/**
+		 * Modifiers colors
+		 */
+
+		@if $alert__colors != none {
+			@each $color in $alert__colors {
+				&--#{$color} {
+					color: color(#{$color});
+					background-color: color(#{$color}-lighter);
+					border-color: color(#{$color}-light);
+				}
+			}
+		}
+	}
+}

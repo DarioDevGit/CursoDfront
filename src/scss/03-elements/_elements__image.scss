@@ -1,0 +1,16 @@
+////
+/// IMG element
+///
+/// This is the imgs' style sheet
+////
+img {
+	max-width 		: 100%;
+	font-style 		: italic;
+	vertical-align 	: middle;
+}
+img,
+img[width],
+img[height] {
+	max-width 		: none;
+	width			: 100%;
+}

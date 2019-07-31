@@ -1,0 +1,20 @@
+////
+/// PERCENTAJE tool
+///
+/// This function returns the percentage ratio between the first and second parameter
+/// @access public
+/// @author Dfront Specialist Team
+/// @example scss percentage(20);
+///     // 20%
+/// @example scss percentage(20, 40);
+///     // 50%
+/// @group Tools
+/// @name percentage
+/// @param {Number} $elemPixels The first number
+/// @param {Number} $totalPixels [100] Shows the number that makes the total of something
+/// @since version 1.0.0
+/// @return {String} 
+////
+@function percentage($elemPixels, $totalPixels:100) {
+    @return unquote(($elemPixels*100)/$totalPixels+"%")
+}

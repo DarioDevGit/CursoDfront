@@ -1,0 +1,61 @@
+////
+/// Hold our breakpoint aliases and conditions in a list.
+///
+/// These can be invoked later on via the `media-query()` mixin found in `_tools.responsive`.
+///
+/// @access public
+/// @author Dfront Specialist Team
+/// @group Settings
+/// @name config responsive
+/// @see $media-query
+/// @since version 1.0.0
+///
+/// Defines if our project is mobile first
+/// @group Settings
+/// @type Boolean
+
+///*-----------------------------------------------------
+///		# CONFIG - RESPONSIVE TYPE AND MEDIAQUERIES 
+///-----------------------------------------------------*/
+
+
+$ns-mobile-first	: false;
+
+$ns-x-small  		: 	320;
+$ns-small    		: 	480;
+$ns-medium   		: 	768;
+$ns-large    		: 	1024;
+$ns-min-large		: 	1280;
+
+$include__grid-nora : false;
+
+///
+/// This makes de media's ready
+///
+/// WARNING: Do not write anything here, if you want to make a change, please go to _config__project.scss file.
+/// @group Settings
+/// @see config__project
+/// @type Map
+$breakpoints: (
+	'xs'  :  'only screen and (max-width: ' + ($ns-x-small - 1) + 'px)',
+	'sm'  :  'only screen and (max-width: ' + ($ns-small - 1) + 'px)',
+	'md'  :  'only screen and (max-width: ' + ($ns-medium - 1) + 'px)',
+	'lg'  :  'only screen and (max-width: ' + ($ns-large - 1) +'px)',
+	'xl'  :  'only screen and (max-width: ' + ($ns-min-large - 1) + 'px)'
+) !default;
+
+@if ($ns-mobile-first == true){
+	
+	$breakpoints: (
+		'xs'  :  'only screen and (min-width: ' + ($ns-x-small) + 'px)',
+		'sm'  :  'only screen and (min-width: ' + ($ns-small) + 'px)',
+		'md'  :  'only screen and (min-width: ' + ($ns-medium) + 'px)',
+		'lg'  :  'only screen and (min-width: ' + ($ns-large) + 'px)',
+		'xl'  :  'only screen and (min-width: ' + ($ns-min-large) + 'px)'
+	);
+}
+/// If we have included this file, set a variable to tell the rest of the
+/// framework that we have some responsive settings.
+/// @group Settings
+/// @type Boolean
+$ns-responsive-settings: true;

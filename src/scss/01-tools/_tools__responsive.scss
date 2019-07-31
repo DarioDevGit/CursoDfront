@@ -1,0 +1,48 @@
+////
+/// Here we set a variable assuming that responsive settings are not set globally.
+///
+/// If they have been previously been defined, the following variable
+/// will be override and will be set to `true`.
+/// @access public
+/// @author Dfront Specialist Team
+/// @group Tools
+/// @name $ns-responsive-settings
+/// @since version 1.0.0
+/// @type Boolean
+$ns-responsive-settings: false !default;
+@if ($ns-responsive-settings==false) {
+    @warn "Oops! Have you included a _settings__responsive file?";
+}
+///
+/// Media-query mixin
+///
+/// This mixin provides us all breakpoints we have defined 
+/// in _config__project.scss
+/// @access public
+/// @author Dfront Specialist Team
+/// @example scss @include media-query(xs);
+///     @media screen and min-width(320px){...}
+/// @group Tools
+/// @name media-query
+/// @param {String} $value The value of the border-radius property.
+/// @param {String} $position [all] The path where you must find the font.
+/// @since version 1.0.0
+@mixin media-query($mq) {
+    $breakpoint-found: false; // Loop through the list of breakpoints we’ve provided in our settings file.
+    @each $breakpoint in $breakpoints {
+        // Grab the alias and the condition from their respective locations in
+        // the list.
+        $alias: nth($breakpoint, 1);
+        $condition: nth($breakpoint, 2); // If the media query we’ve specified has an alias and a condition...
+        @if $mq==$alias and $condition {
+            // ...tell the mixin that we’ve found it...
+            $breakpoint-found: true; // ...and spit it out here.
+            @media #{$condition} {
+                @content;
+            }
+        }
+    } // If the user specifies a non-exitent alias, send them a warning.
+    @if $breakpoint-found==false {
+        @warn "Oops! Breakpoint ‘#{$mq}’ does not exist."
+    }
+}

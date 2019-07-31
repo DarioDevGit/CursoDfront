@@ -1,0 +1,53 @@
+/*-------------------------------------------------------------
+    #radio
+-----------------------------------------------------------------*/
+
+@if $include__card==true {
+    
+    .o-card,
+	%card {
+        display: block;
+        width: 100%;
+        background-color: color(white);
+        border: 1px solid color(default-light);
+        @include border-radius(4px);
+
+        &__header {
+            position: relative;
+            height: 180px;
+            overflow: hidden;
+        }
+        &__image {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            @include transform(translateY(-50%));
+        }
+        &__container {
+            padding: rem(20) rem(20);
+        }
+        &__title {
+            margin-bottom: 12px;
+            font-size: rem(24);
+        }
+        &__subtitle {
+            margin-bottom: 12px;
+            font-size: rem(16);
+            line-height: rem(16 + 4);
+            color: color(default);
+        }
+        &__txt {
+            margin-bottom: 12px;
+            font-size: rem(16);
+            line-height: rem(16 + 4);
+        }
+        &__footer {
+            padding: 0 rem(20) rem(20) rem(20); 
+        }
+        &__lnk {
+            font-size: rem(16);
+            line-height: rem(16 + 4);
+            color: color(primary);
+        }
+    }
+}

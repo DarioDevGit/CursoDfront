@@ -1,0 +1,32 @@
+{
+  "name": "wefrontv2stable",
+  "version": "2.0.1",
+  "author": "Centro de excelencia en desarrollo front, Everis SLU",
+  "scripts": {
+    "postinstall": "node add-snippets"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.8.0",
+    "browser-sync": "^2.18.5",
+    "chalk": "^2.1.0",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-eslint": "^4.0.2",
+    "gulp-group-css-media-queries": "^1.2.0",
+    "gulp-help": "^1.6.1",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-pixrem": "^1.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sass-glob": "^1.0.8",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-watch": "^4.3.11",
+    "gulp-webserver": "^0.9.1",
+    "node-notifier": "^5.1.2",
+    "path": "^0.12.7",
+    "run-sequence": "^2.0.0"
+  },
+  "dependencies": {}
+}
