@@ -10,30 +10,93 @@
 /// @since version 1.0.0
 ////
 .#{$ns}main {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  padding: rem(40) 0;
+  margin: 0;
+
+  &__alerts {
     display: flex;
-    justify-content: center;
-    font-size: 14px;
-    padding: 0;
-    margin: 0;
+    width: 30%;
+    flex-direction: column;
+    margin-right: rem(15);
+    margin-left: rem(15);
+  }
 
-    &__alerts{
-        display: flex;
-        width: 25%;
-        flex-direction: column;
-        align-items: center;
-    }
+  &__events-table {
+    width: 100%;
+    height: rem(400);
+  }
 
-    &__information{
-        display: flex;
-        flex-direction: column;
-        width: 50%;
-        align-items: center;
-    }
+  &__icon{
+      position: relative;
+      bottom: rem(2);
+      padding-left: rem(15);
+      padding-right: rem(15);
+  }
 
-    &__social{
-        display: flex;
-        flex-direction: column;
-        width: 25%;
-        align-items: center;
-    }
+  &__title {
+    display: flex;
+    width: 100%;
+    background-color: #4366a6;
+    justify-content: left;
+    align-items: center;
+    height: rem(50);
+    border-top-right-radius: rem(8);
+    border-top-left-radius: rem(8);
+    //css maqueta
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+  }
+
+  &__notifications {
+    width: 100%;
+    // margin-right: rem(15);
+  }
+
+  &__notifications-table {
+    width: 100%;
+    height: rem(400);
+  }
+
+  &__title {
+    width: 100%;
+    background-color: #4366a6;
+    text-align: center;
+  }
+
+  &__information {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+  }
+
+  &__mails-table {
+    width: 100%;
+    height: rem(532);
+  }
+
+  &__projects-table {
+    width: 100%;
+    height: rem(495);
+  }
+
+  &__social {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin-right: rem(15);
+    margin-left: rem(15);
+  }
+
+  &__social-table {
+    width: 100%;
+    height: rem(500);
+  }
 }

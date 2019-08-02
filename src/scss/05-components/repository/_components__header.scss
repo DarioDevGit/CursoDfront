@@ -23,17 +23,20 @@
   }
 
   &__form {
+    display: inline-block;
     border-radius: 4px;
     width: 40%;
     background-color: color(white);
     input {
+      display: inline-block;
       background-color: transparent;
       border: none;
-      width: rem(512);
+      width: 90%;
       height: rem(40);
     }
 
     button {
+      display: inline-block;
       background: none;
       border: none;
       color: #cdcccd;
@@ -58,9 +61,9 @@
         font-size: rem(14);
       }
     }
-    a:hover{
-        cursor: pointer;
-      }
+    a:hover {
+      cursor: pointer;
+    }
     figure {
       display: inline-flex;
       flex-direction: column;
