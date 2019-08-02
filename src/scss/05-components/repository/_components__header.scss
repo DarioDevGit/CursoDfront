@@ -23,12 +23,11 @@
   }
 
   &__form {
-    display: inline-block;
     border-radius: 4px;
     width: 40%;
     background-color: color(white);
     input {
-      display: inline-block;
+      padding-left: rem(10);
       background-color: transparent;
       border: none;
       width: 90%;
@@ -36,7 +35,6 @@
     }
 
     button {
-      display: inline-block;
       background: none;
       border: none;
       color: #cdcccd;
@@ -97,6 +95,21 @@
     img:nth-child(2) {
       width: rem(35);
       height: rem(35);
+    }
+  }
+
+  @media (min-width: 1024px) and (max-width: 1279px) {
+    &__form {
+      border-radius: 4px;
+      width: 30%;
+      background-color: color(white);
+    }
+
+    &__icons {
+      display: inline-flex;
+      width: 40%;
+      padding-left: 5%;
+      justify-content: space-between;
     }
   }
 }

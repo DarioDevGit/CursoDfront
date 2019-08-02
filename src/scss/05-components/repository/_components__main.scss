@@ -29,11 +29,11 @@
     height: rem(400);
   }
 
-  &__icon{
-      position: relative;
-      bottom: rem(2);
-      padding-left: rem(15);
-      padding-right: rem(15);
+  &__icon {
+    position: relative;
+    bottom: rem(2);
+    padding-left: rem(15);
+    padding-right: rem(15);
   }
 
   &__title {
@@ -69,6 +69,12 @@
     width: 100%;
     background-color: #4366a6;
     text-align: center;
+  }
+  &__menu {
+    display: inline-flex !important;
+    width: 100%;
+    justify-content: flex-end;
+    padding-right: 10px;
   }
 
   &__information {
