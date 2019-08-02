@@ -1,0 +1,99 @@
+////
+/// HEADER component
+///
+/// Description of the component
+///
+/// @access public
+/// @author Dfront Specialist Team
+/// @group components
+/// @name .#{$wf__ns}header
+/// @since version 1.0.0
+////
+.#{$ns}header {
+  background: linear-gradient(to right, #4579b0, #207e8e, #859603);
+  display: flex;
+  width: 100%;
+  height: rem(75);
+  align-items: center;
+  &__span {
+    display: flex;
+    width: 15%;
+    justify-content: center;
+    color: color(white);
+  }
+
+  &__form {
+    border-radius: 4px;
+    width: 40%;
+    background-color: color(white);
+    input {
+      background-color: transparent;
+      border: none;
+      width: rem(512);
+      height: rem(40);
+    }
+
+    button {
+      background: none;
+      border: none;
+      color: #cdcccd;
+      width: rem(17);
+      height: rem(18);
+    }
+  }
+
+  &__icons {
+    display: inline-flex;
+    width: 30%;
+    padding-left: 5%;
+    justify-content: space-between;
+    a {
+      color: white;
+      font-size: rem(25);
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+      align-items: center;
+      p {
+        font-size: rem(14);
+      }
+    }
+    a:hover{
+        cursor: pointer;
+      }
+    figure {
+      display: inline-flex;
+      flex-direction: column;
+      max-width: rem(35);
+      align-self: center;
+      align-items: center;
+      p {
+        font-size: rem(14);
+        color: color(white);
+      }
+    }
+  }
+
+  &__profile {
+    width: 15%;
+    display: inline-flex;
+    justify-content: center;
+    a {
+      color: white;
+      font-size: rem(20);
+    }
+  }
+
+  &__figure {
+    max-width: rem(50);
+    display: inline-flex;
+    img:nth-child(1) {
+      width: rem(25);
+      height: rem(25);
+    }
+    img:nth-child(2) {
+      width: rem(35);
+      height: rem(35);
+    }
+  }
+}

@@ -7,25 +7,57 @@
     <link rel="stylesheet" href="../css/front-modules.css" />
     <!-- <script type="text/javascript" src="../libs/dependencies.js"></script> -->
     <script type="text/javascript" src="../js/front.js"></script>
+    <script src="https://kit.fontawesome.com/0fa03c8d39.js"></script>
     <title>Pagina DFRONT</title>
   </head>
 
   <body>
     <header class="ns-header">
-      <figure class="ns-header__figure ns-figure">
-        <img class="ns-figure__img" />
-      </figure>
-      <form class="ns-header">
-        <input />
-        <button></button>
-      </form>
-      <div>
-        <!-- Iconos -->
+      <div class="ns-header__span">
+        <span class="ns-header__text-logo">everis<strong>knowler</strong></span> <!--revisar-->
       </div>
-      <di>
+      <!-- Iconos -->
+      <form class="ns-header__form">
+        <input />
+        <button><i class="fas fa-search"></i></button>
+      </form>
+      <div class="ns-header__icons">
+        <a href="#" class="fas fa-house-damage"><p>Inicio</p></a>
+        <a href="#" class="fas fa-th"><p>Aplicaciones</p></a>
+        <a href="#" class="fas fa-globe"><p>Comunidades</p></a>
+        <figure>
+          <img class="everis" src="../assets/images/everis.png" />
+          <p>everPedia</p>
+        </figure>
+      </div>
+      <div class="ns-header__profile">
         <!-- Notificaciones y usuario -->
-      </di>
+        <figure class="ns-header__figure figure">
+          <img class="figure__bell" src="../assets/images/bell.png" />
+          <img class="figure__avatar" src="../assets/images/perfil.png" />
+        </figure>
+      </div>
     </header>
-    <main class="ns-main"></main>
+    <main class="ns-main">
+      <div class="ns-main__alerts">
+        <div class="ns-main__events">
+          <p>Eventos</p>
+        </div>
+        <div class="ns-main__notifications">
+          <p>Notificaciones</p>
+        </div>
+      </div>
+      <div class="ns-main__information">
+        <div class="ns-main__mails">
+          <p>Emails</p>
+        </div>
+        <div class="ns-main__projects">
+          <p>Proyectos</p>
+        </div>
+      </div>
+      <div class="ns-main__social">
+        <p>Mis Contactos</p>
+      </div>
+    </main>
   </body>
 </html>
