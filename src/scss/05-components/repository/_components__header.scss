@@ -15,7 +15,7 @@
   width: 100%;
   height: rem(75);
   align-items: center;
-  &__span {
+  &__logo {
     display: flex;
     width: 15%;
     justify-content: center;
@@ -26,58 +26,57 @@
     border-radius: 4px;
     width: 40%;
     background-color: color(white);
-    input {
+    font-size: 0;
+
+    &-legend {
+      position: absolute;
+      left: -9999px;
+    }
+
+    &-label {
+      position: absolute;
+      left: -9999px;
+    }
+
+    &-input {
+      font-size: 14px;
       padding-left: rem(10);
       background-color: transparent;
       border: none;
-      width: 90%;
+      width: calc(100% - 40px);
       height: rem(40);
     }
 
-    button {
+    &-button {
+      font-size: 14px;
       background: none;
       border: none;
       color: #cdcccd;
-      width: rem(17);
-      height: rem(18);
+      width: rem(40);
+      height: rem(40);
+      cursor: pointer;
     }
   }
 
-  &__icons {
-    display: inline-flex;
+  &__nav {
     width: 30%;
     padding-left: 5%;
+    display: flex;
     justify-content: space-between;
-    a {
+    &-list {
+      display: flex;
+      width: 80%;
+      justify-content: space-between;
       color: white;
       font-size: rem(25);
-      display: flex;
-      flex-direction: column;
-      align-self: center;
-      align-items: center;
-      p {
-        font-size: rem(14);
-      }
     }
-    a:hover {
+    li:hover {
       cursor: pointer;
-    }
-    figure {
-      display: inline-flex;
-      flex-direction: column;
-      max-width: rem(35);
-      align-self: center;
-      align-items: center;
-      p {
-        font-size: rem(14);
-        color: color(white);
-      }
     }
   }
 
   &__profile {
     width: 15%;
-    display: inline-flex;
     justify-content: center;
     a {
       color: white;
@@ -86,8 +85,10 @@
   }
 
   &__figure {
-    max-width: rem(50);
-    display: inline-flex;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
     img:nth-child(1) {
       width: rem(25);
       height: rem(25);
@@ -105,7 +106,7 @@
       background-color: color(white);
     }
 
-    &__icons {
+    &__nav {
       display: inline-flex;
       width: 40%;
       padding-left: 5%;

@@ -45,7 +45,7 @@
     height: rem(50);
     border-top-right-radius: rem(6);
     border-top-left-radius: rem(6);
-    //css maqueta
+    //SCSS MAQUETA
     font-size: 16px;
     font-weight: 600;
     font-style: normal;
@@ -57,7 +57,6 @@
 
   &__notifications {
     width: 100%;
-    // margin-right: rem(15);
   }
 
   &__notifications-table {
@@ -99,9 +98,6 @@
     width: 25%;
     margin-right: rem(15);
     margin-left: rem(15);
-    // &--social{
-    //     display: 
-    // }
   }
 
   &__social-table {

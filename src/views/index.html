@@ -14,24 +14,53 @@
   <body>
     <!-- HEADER -->
     <header class="ns-header">
-      <div class="ns-header__span">
-        <span class="ns-header__text-logo">everis<strong>knowler</strong></span>
+      <div class="ns-header__logo">
+        <span class="ns-header__logo-txt">everis<strong>knowler</strong></span>
         <!--revisar-->
       </div>
       <!-- Iconos -->
       <form class="ns-header__form">
-        <input placeholder="proyecto skm"/>
-        <button><i class="fas fa-search"></i></button>
+        <fieldset>
+          <legend class="ns-header__form-legend">Buscador</legend>
+          <label class="ns-header__form-label" for="name">Search</label>
+          <input
+            class="ns-header__form-input"
+            name="search"
+            id="search"
+            type="text"
+            placeholder="proyecto skm"
+          />
+          <button class="ns-header__form-button">
+            <i class="fas fa-search"></i>
+          </button>
+        </fieldset>
       </form>
-      <div class="ns-header__icons">
-        <a href="#" class="fas fa-house-damage"><p>Inicio</p></a>
-        <a href="#" class="fas fa-th"><p>Aplicaciones</p></a>
-        <a href="#" class="fas fa-globe"><p>Comunidades</p></a>
-        <figure>
-          <img class="everis" src="../assets/images/everis.png" />
+      <nav class="ns-header__nav">
+        <ul class="ns-header__nav-list">
+          <li class="ns-header__nav-item">
+            <div class="ns-thumb">
+              <i class="ns-thumb__icon fas fa-house-damage"></i>
+              <p class="ns-thumb__txt">Inicio</p>
+            </div>
+          </li>
+          <li class="ns-header__nav-item">
+            <div class="ns-thumb">
+              <i class="ns-thumb__icon fas fa-th"></i>
+              <p class="ns-thumb__txt">Aplicaciones</p>
+            </div>
+          </li>
+          <li class="ns-header__nav-item">
+            <div class="ns-thumb">
+              <i class="ns-thumb__icon fas fa-globe"></i>
+              <p class="ns-thumb__txt">Comunidades</p>
+            </div>
+          </li>
+        </ul>
+        <figure class="ns-thumb__image">
+          <img src="../assets/images/everis.png" />
           <p>everPedia</p>
         </figure>
-      </div>
+      </nav>
       <div class="ns-header__profile">
         <!-- Notificaciones y usuario -->
         <figure class="ns-header__figure figure">
@@ -51,7 +80,29 @@
             <p class="ns-main__pharagrap">EVENTOS</p>
             <i class="fas fa-ellipsis-v ns-main__menu"></i>
           </div>
-          <div class="ns-main__events-table"></div>
+          <div class="ns-main__events-table">
+            <span class="ns-main__events-table-day">HOY</span>
+            <div class="ns-main__events-table-event">
+              <div class="ns-main__event">
+                <div class="ns-main__event-time">11:00</div>
+                <p class="ns-main__event-name">SKM Wireframes checkpoint</p>
+                <p class="ns-main__event-room">11:00 a 12:00 - Sala 446</p>
+              </div>
+              <div class="ns-main__event">
+                <div class="ns-main__event-time">13:00</div>
+                <p class="ns-main__event-name">SKM chill out</p>
+                <p class="ns-main__event-room">13:00 a 13:40 - Sala 446</p>
+              </div>
+            </div>
+            <span class="ns-main__events-table-day">MAÑANA</span>
+            <div class="ns-main__events-table-event">
+              <div class="ns-main__event">
+                <div class="ns-main__event-time">11:00</div>
+                <p class="ns-main__event-name">SKM Wireframes check</p>
+                <p class="ns-main__event-room">11:00 a 12:00 - Sala 446</p>
+              </div>
+            </div>
+          </div>
         </div>
         <!--NOTIFICACIONES-->
         <div class="ns-main__notifications">
@@ -77,7 +128,7 @@
         <!--PROJECTS-->
         <div class="ns-main__projects">
           <div class="ns-main__title">
-              <i class="fas fa-folder-open ns-main__icon"></i>
+            <i class="fas fa-folder-open ns-main__icon"></i>
             <p class="ns-main__pharagrap">PROYECTOS</p>
             <i class="fas fa-ellipsis-v ns-main__menu"></i>
           </div>
@@ -87,7 +138,7 @@
       <!--SOCIAL-->
       <div class="ns-main__social">
         <div class="ns-main__title">
-            <i class="fas fa-user-friends ns-main__icon"></i>
+          <i class="fas fa-user-friends ns-main__icon"></i>
           <p class="ns-main__pharagrap--social">MIS CONTACTOS</p>
           <i class="fas fa-ellipsis-v ns-main__menu"></i>
         </div>
