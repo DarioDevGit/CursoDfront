@@ -18,7 +18,7 @@
 
   &__alerts {
     display: flex;
-    width: 30%;
+    width: 25%;
     flex-direction: column;
     margin-right: rem(15);
     margin-left: rem(15);
@@ -43,8 +43,8 @@
     justify-content: left;
     align-items: center;
     height: rem(50);
-    border-top-right-radius: rem(8);
-    border-top-left-radius: rem(8);
+    border-top-right-radius: rem(6);
+    border-top-left-radius: rem(6);
     //css maqueta
     font-size: 16px;
     font-weight: 600;
@@ -80,7 +80,7 @@
   &__information {
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 50%;
   }
 
   &__mails-table {
@@ -96,9 +96,12 @@
   &__social {
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 25%;
     margin-right: rem(15);
     margin-left: rem(15);
+    // &--social{
+    //     display: 
+    // }
   }
 
   &__social-table {
